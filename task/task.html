@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>suuuurvey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="./css.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid body-content">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <p>I'd like to get a sense for the kinds of tasks you're doing on Mechanical Turk, what kinds of skills you have (whether they're recognized on AMT or not), etc...</p>
+              <p>To be clear, there are no wrong answers.</p>
+            </div>
+            <!-- <form action="https://www.mturk.com/mturk/externalSubmit" method="post"> -->
+            <form action="https://workersandbox.mturk.com/mturk/externalSubmit" method="post">
+
+            <input type="hidden" name="assignmentId" id="assignment_id" value="test" />
+
+
+<div class="form-group">
+    <label class="control-label" for="online_courses">
+        <div class='row'>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h3>Online Courses</h3>
+                <p>Have you taken any courses online? Where? What classes did you take?</p>
+            </div>
+        </div>
+    </label>
+    <div class='row'>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <textarea class="form-control" rows="5" name="online_courses" id="online_courses"></textarea>
+        </div>
+        <div class='row'>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <em>For example</em>
+
+                <textarea class="form-control" rows="4" readonly>- Codeacademy (How to sign up for sites)
+- Lynda (How to google things)</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="form-group">
+    <label class="control-label" for="task_types">
+        <div class='row'>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h3>Kinds of Tasks</h3>
+                <p>What <em>kinds</em> of HITs do you generally do?</p>
+                <p>If you're having trouble thinking about the kinds of HITs you do, it might help to think about the tasks you've done today on Amazon Mechanical Turk, or over the last week.</p>
+            </div>
+        </div>
+    </label>
+    <div class='row'>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <textarea class="form-control" rows="5" name="task_types" id="task_types"></textarea>
+        </div>
+        <div class='row'>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <em>For example</em>
+
+                <textarea class="form-control" rows="4" readonly>- tagging images of cats
+- doing attention checks
+- academic surveys</textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+                <div class="form-group">
+                    <label class="control-label" for="master_of_something">
+                        <div class='row'>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h3>(Hypothetical) Masters Qual</h3>
+                                <p>Amazon used to have Masters Qualifications for different <em>kinds</em> of tasks (like <em>photo moderation</em> and <em>categorization</em>).</p>
+                                <p>If Amazon were to bring that back, but wanted to introduce new kinds of masters qualifications, what would you suggest?</p>
+                                <p>In a few sentences, what argument would you make that <b>you</b> should be in that group (or those groups)?</p>
+                            </div>
+                        </div>
+                    </label>
+                    <div class='row'>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <textarea class="form-control" rows="5" name="master_of_something" id="master_of_something"></textarea>
+                        </div>
+                        <div class='row'>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <em>For example</em>
+                                <textarea class="form-control" rows="4" readonly>- Image tagging: I do a lot of image tagging tasks and my approval rate among them is 99%
+- Translation: I'm bilingual, have taken 4 years of Spanish courses in High School</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                          <button type='submit' class="btn-primary-spacing btn btn-success btn-lg">submit</button>
+                          
+                      </div>
+                  </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+  window.onload=function(){
+  var assignment_id=location.search.match(/assignmentId=(\w+)/)[1];
+  $("#assignment_id")[0].value=assignment_id;
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62789523-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
