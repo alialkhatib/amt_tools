@@ -36,7 +36,7 @@ I really need people to contribute to this:
 - Think of commands that you'd like to be able to run and either implement them and make a pull request,
 *or* make an issue requesting some feature be implemented (and someone will (hopefully) go and implement it).
 
-If you have any questions, please feel free to contact me (@alialkhatib)
+If you have any questions, please feel free to contact me ([@alialkhatib][github maintainer])
 
 [the aws iam page]: https://aws.amazon.com/iam/
 [aws cli]: https://aws.amazon.com/cli/
@@ -44,3 +44,4 @@ If you have any questions, please feel free to contact me (@alialkhatib)
 [another story]: https://thenextweb.com/security/2017/06/02/amazon-web-services-leak-data-aws/
 [yet another story]: https://wptavern.com/ryan-hellyers-aws-nightmare-leaked-access-keys-result-in-a-6000-bill-overnight
 [a fourth story]: https://www.theregister.co.uk/2015/01/06/dev_blunder_shows_github_crawling_with_keyslurping_bots/
+[github maintainer]: https://github.com/alialkhatib
