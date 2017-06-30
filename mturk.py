@@ -83,13 +83,14 @@ quals=[
   'QualificationTypeId': "000000000000000000L0", # Amazon has a lot of arcane looking qualification types
   "Comparator": "GreaterThan",
   "IntegerValues": [85]
-}]
+}
+]
 
 client=boto3.client(
   service_name='mturk',
   region_name='us-east-1',
-  aws_access_key_id=args.awsKey or os.environ['AMT_Example_key'], # => ~/.envariables
-  aws_secret_access_key=args.awsSecret or os.environ['AMT_Example_secret'], # => ~/.envariables
+  aws_access_key_id=args.awsKey or os.environ['AMT_key'], # => ~/.envariables
+  aws_secret_access_key=args.awsSecret or os.environ['AMT_secret'], # => ~/.envariables
   endpoint_url = endpoint['production'] if args.live else endpoint['sandbox']
 )
 
@@ -105,7 +106,7 @@ if args.getHIT:
 
 if args.create:
   response = client.create_hit(
-    MaxAssignments = 20,
+    MaxAssignments = 9,
     LifetimeInSeconds = 60*60, # the HIT will only be active for 1 hour.
     AssignmentDurationInSeconds = (60*30), # this gives workers 30 minutes to complete it once they claim it.
     Reward ='0.50', # calculate the appropriate rate so people are getting paid fairly for their time.
