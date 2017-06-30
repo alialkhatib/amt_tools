@@ -18,3 +18,14 @@ you may want to run `brew install awscli` to automate some stuff a little more e
 
 [the aws iam page]: https://aws.amazon.com/iam/
 [aws cli]: https://aws.amazon.com/cli/
+
+
+## Contributing
+I really need people to contribute to this:
+
+- Find things that are confusing or poorly documented and add comments to the code.
+- Find things that are broken and fix them (or create an issue and document it)
+- Think of commands that you'd like to be able to run and either implement them and make a pull request,
+*or* make an issue requesting some feature be implemented (and someone will (hopefully) go and implement it).
+
+If you have any questions, please feel free to contact me (@alialkhatib)
